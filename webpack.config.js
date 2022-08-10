@@ -1,13 +1,12 @@
 const path = require('path');
 
 module.exports = {
-    watch: true,
-    mode: 'development',
+    // watch: true,
+    mode: 'production',
     entry: {
       main: path.join(__dirname, 'src','index.js'),
     },
     output: {
-      path: path.join(__dirname, 'test'),
         filename: 'bundle.js',
       },
   };
