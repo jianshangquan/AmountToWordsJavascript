@@ -4,9 +4,11 @@
 const unit = ["ခု", "ဆယ်", "ရာ", "ထောင်", "သောင်း", "သိန်း", "သန်း", "ကုဍ"];
 const numbers = ["၁", "၂", "၃", "၄", "၅", "၆", "၇", "၈", "၉", "၀"];
 const words = ["တစ်", "နှစ်", "သုံး", "လေး", "ငါး", "ခြှောက်", "ခုနှစ်", "ရှစ်", "ကိုး", "သုံည"];
+const maxConvertableAmt = 10000000000000;
 
 
 function convert(amount){
+    if(!isValidAmount(amount)) throw Error(`Convert burmese amount must be lower than ${maxConvertableAmt}`);
     let amtString = amount.toString();
     let firstTheinAmt = amtString.length > 5 ? amtString.substring(0, amtString.length - 5) : "";
     let lastTheinAmt = amtString.substring(amtString.length < 6 ? 0 : amtString.length - 6);
@@ -14,7 +16,7 @@ function convert(amount){
 
     result = convertThein(lastTheinAmt);
     if(firstTheinAmt.length != 0){
-        result = convertThein(firstTheinAmt) + result;
+        result = convertThein(firstTheinAmt) + (result.length == 0 ? "သိန်း" : "") + result;
     }
     result = result + ((lastTheinAmt.charAt(lastTheinAmt.length - 1) != '0') ? lastTheinAmt.charAt(lastTheinAmt.length - 1) : "") + "ကျပ်";
 
@@ -34,6 +36,10 @@ function convertThein(theinAmt){
     return result;
 }
 
+
+function isValidAmount(value){
+    return value < maxConvertableAmt;
+}
 
 
 module.exports = {
