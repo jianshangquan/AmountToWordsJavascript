@@ -3,8 +3,10 @@
 Convert amount in letter. 
 > Note : Currently it support only burmese
 
-```java
-    String result = AmountToWord.convertTo( 123456789, AmountConversion.BURMESE);
+```javascript
+    const {AmountToWords, AmountConversion} = require('./amount-to-words');
+    
+    const output = AmountToWords.convertTo(123456789, AmountConversion.BURMESE);
     // output => တစ်ထောင်နှစ်ရာသုံးဆယ့်လေးသိန်းငါးသောင်းခြှောက်ထောင်ခုနှစ်ရာရှစ်ဆယ့်ကိုးကျပ်
 ```
 
