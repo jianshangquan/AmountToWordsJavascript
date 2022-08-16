@@ -1,6 +1,6 @@
 {
-  "name": "amounttowordsjavascript",
-  "version": "1.0.0",
+  "name": "amount-to-words-js",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
