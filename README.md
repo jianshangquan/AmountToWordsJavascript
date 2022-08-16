@@ -3,10 +3,10 @@
 Convert amount in letter. 
 
 ## About
-This repository is combined 3 language converter into single package
+This repository is combined 3 language converter into single package\
 For Chinese language: [number-to-chinese-words](https://www.npmjs.com/package/number-to-chinese-words)\
 For English language: [amount-to-words](https://www.npmjs.com/package/amount-to-words)\
-For Burmese language: [my own source code](https://github.com/jianshangquan/AmountToWordsJavascript)\
+For Burmese language: [my own source code](https://github.com/jianshangquan/AmountToWordsJavascript)
 
 ```javascript
     const {AmountToWords, AmountConversion} = require('./amount-to-words');
