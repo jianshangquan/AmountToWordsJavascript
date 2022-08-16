@@ -1,3 +1,4 @@
-const {AmountToWords, AmountConversion} = require('./amount-to-words');
+const {AmountToWords, AmountConversion} = require('amount-to-words-js');
 
-const output = AmountToWords.convertTo(1235000000, AmountConversion.BURMESE);
+const output = AmountToWords.convertTo(123456798, AmountConversion.BURMESE);
+console.log(output);
